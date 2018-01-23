@@ -26,7 +26,7 @@ async function behanceProjects(query) {
   const endingUrl = `&client_id=${behanceKey}&callback=JSONPCallback`
   let queryString = encodeData(query);
 
-  let response = await fetchJsonp(`http://behance.net/v2/projects/?${queryString}${endingUrl}`);
+  let response = await fetchJsonp(`https://behance.net/v2/projects/?${queryString}${endingUrl}`);
 
   return await response.json();
 }
